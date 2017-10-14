@@ -1,0 +1,26 @@
+{% if page.meta.source %}
+<div class="source-links">
+{% for filename in page.meta.source %}
+    <span class="label label-primary">{{ filename }}</span>
+{% endfor %}
+</div>
+{% endif %}
+
+{% include "breadcrumbs.html" %}
+
+{{ page.content }}
+
+<hr />
+
+{% if page.next_page %}
+<nav>
+  <ul class="pager hidden-print">
+    <li class="previous{% if not page.previous_page %} disabled{% endif %}">
+      <a rel="prev" {% if page.previous_page %}href="{{ page.previous_page.url }}"{% endif %}><i class="fa fa-arrow-left"></i> Previous</a>
+    </li>
+    <li class="next{% if not page.next_page %} disabled {% endif %}">
+      <a rel="next" {% if page.next_page %}href="{{ page.next_page.url }}"{% endif %}>Next <i class="fa fa-arrow-right"></i></a>
+    </li>
+  </ul>
+</nav>
+{% endif %}
