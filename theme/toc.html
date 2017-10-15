@@ -11,10 +11,10 @@
     {% if page.next_page %}
     <ul class="pager hidden-print">
       <li class="previous{% if not page.previous_page %} disabled{% endif %}">
-        <a rel="prev" {% if page.previous_page %}href="{{ page.previous_page.url }}"{% endif %}><i class="fa fa-arrow-left"></i> Previous</a>
+        <a rel="prev" {% if page.previous_page %}href="{{ page.previous_page.url }}"{% endif %}><i class="fa fa-arrow-left"></i> Anterior</a>
       </li>
       <li class="next{% if not page.next_page %} disabled {% endif %}">
-        <a rel="next" {% if page.next_page %}href="{{ page.next_page.url }}"{% endif %}>Next <i class="fa fa-arrow-right"></i></a>
+        <a rel="next" {% if page.next_page %}href="{{ page.next_page.url }}"{% endif %}>Próxima <i class="fa fa-arrow-right"></i></a>
       </li>
     </ul>
     {% endif %}

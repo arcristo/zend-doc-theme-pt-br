@@ -15,7 +15,7 @@ $(function () {
     $(".zf-logo a").tooltip();
     $(".logo-link").tooltip();
     componentToggle.tooltip();
-    rollUpLink.attr({href: "#", alt: "Hide component list"});
+    rollUpLink.attr({href: "#", alt: "Ocultar lista de componentes"});
 
     // Cast initial sidebar position value
     if (typeof sidebarInitialPos === 'undefined') {
@@ -57,7 +57,7 @@ $(function () {
                 complete: function () {
                     componentToggle
                         .data("placement", "top")
-                        .attr("data-original-title", "Hide component list");
+                        .attr("data-original-title", "Ocultar lista de componentes");
                     hidden = false;
                 },
                 queue: false
@@ -72,7 +72,7 @@ $(function () {
                 sidebar.css({position: sidebarInitialPos});
                 componentToggle
                     .data("placement", "bottom")
-                    .attr("data-original-title", "Show component list");
+                    .attr("data-original-title", "Exibir lista de componentes");
                 components.hide();
                 hidden = true;
             },

@@ -6,7 +6,7 @@
             {% if nav|length>1 or config.repo_url %}
             <!-- Expander button -->
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
+                <span class="sr-only">Alternar navegação</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -15,7 +15,7 @@
 
             <!-- Main title -->
             <span class="navbar-brand">
-                <a class="logo-link" href="https://framework.zend.com/" data-toggle="tooltip" data-placement="bottom" title="Go to the ZF homepage"><img src="{{ base_url }}/img/zf-logo-mark.svg" height="28" alt="Zend Framework" /></a>
+                <a class="logo-link" href="https://framework.zend.com/" data-toggle="tooltip" data-placement="bottom" title="Ir para a página inicial do Zend Framework"><img src="{{ base_url }}/img/zf-logo-mark.svg" height="28" alt="Zend Framework" /></a>
                 <a href="{{ nav.homepage.url }}">{{ config.site_name }}</a>
             </span>
         </div>
@@ -46,14 +46,14 @@
 
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="#" class="component-toggle" data-toggle="tooltip" data-placement="bottom" title="Show component list">
-                        <i class="fa fa-book"></i> Components
+                    <a href="#" class="component-toggle" data-toggle="tooltip" data-placement="bottom" title="Exibir lista de componentes">
+                        <i class="fa fa-book"></i> Componentes
                     </a>
                 </li>
 
                 <li>
                     <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
-                        <i class="fa fa-search"></i> Search
+                        <i class="fa fa-search"></i> Pesquisar
                     </a>
                 </li>
                 {% if config.repo_url %}
