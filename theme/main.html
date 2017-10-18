@@ -43,14 +43,16 @@
 
     {% include "nav.html" %}
 
-    <!-- content:begin -->
-    <div id="page-top" class="container docs">
-        {% block content %}
-        <div class="col-md-3">{% include "toc.html" %}</div>
-        <div class="col-md-9" role="main">{% include "content.html" %}</div>
-        {% endblock %}
-    </div>
-    <!-- content:end -->
+    {% if page.input_path|string() == 'index.html' %}
+        {{ page.content }}
+    {% else %}
+        <div id="page-top" class="container docs">
+            {% block content %}
+            <div class="col-md-3">{% include "toc.html" %}</div>
+            <div class="col-md-9" role="main">{% include "content.html" %}</div>
+            {% endblock %}
+        </div>
+    {% endif %}
 
     {% include "footer.html" %}
 
