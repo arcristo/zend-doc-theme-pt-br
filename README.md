@@ -3,7 +3,7 @@
 This repository contains the MkDocs theme proposed for Zend Framework
 documentation.
 
-It is forked from the repo [zf-mkdoc-theme](https://github.com/zendframework/zf-mkdoc-theme),
+It is based on the repo [zf-mkdoc-theme](https://github.com/zendframework/zf-mkdoc-theme),
 with a number of modifications, including:
 
 - Footer modifications to link to the ZF project.
