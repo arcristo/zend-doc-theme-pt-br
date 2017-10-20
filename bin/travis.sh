@@ -23,7 +23,7 @@ yarn add gulp-cli -g
 yarn add gulp -D
 
 # Install php
-sudo add-apt-repository ppa:ondrej/php
+sudo add-apt-repository -y ppa:ondrej/php
 sudo apt-get update
 apt-get install -y php7.0 php7.0-cli
 
