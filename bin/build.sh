@@ -24,14 +24,16 @@ function help() {
     echo "  ${0} [options]"
     echo "Options:"
     echo "  -h           Usage help; this message."
-    echo "  -m           Maintain original mkdocs.yml file."
+    echo "  -m           Maintain the original mkdocs.yml file."
+    echo "  -t <title>   Change the site title."
     echo "  -u <url>     Deployment URL of documentation (to ensure search works)"
 }
 
-while getopts hmu: option;do
+while getopts hmt:u: option;do
     case "${option}" in
         h) help && exit 0;;
         m) MAINTAIN_CONFIG_FILE=true;;
+        t) SITE_TITLE=${OPTARG};;
         u) SITE_URL=${OPTARG};;
     esac
 done
@@ -59,6 +61,12 @@ fi
 
 echo "extra:" >> mkdocs.yml
 cat zend-doc-theme-pt-br/assets.yml >> mkdocs.yml
+
+# Add custom title to extra section
+if [ -n "${SITE_TITLE}" ]; then
+    echo "  site_title: '${SITE_TITLE}'" >> mkdocs.yml
+fi
+
 echo "markdown_extensions:" >> mkdocs.yml
 echo "    - markdown.extensions.codehilite:" >> mkdocs.yml
 echo "        use_pygments: False" >> mkdocs.yml

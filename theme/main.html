@@ -10,7 +10,7 @@
     <link rel="canonical" href="{{ page.canonical_url }}">{% endif %}
     <link rel="shortcut icon" href="{{ base_url }}/img/favicon.ico">
 
-    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ config.site_name }}</title>
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{% if config.extra.site_title %}{{ config.extra.site_title }}{% else %}{{ config.site_name }}{% endif %}</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
