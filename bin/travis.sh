@@ -19,8 +19,8 @@ sudo apt-get update
 sudo apt-get install yarn
 
 # Install gulp
-yarn add gulp-cli -g
-yarn add gulp -D
+yarn global add gulp-cli
+yarn global add gulp -D
 
 # Install php
 sudo add-apt-repository -y ppa:ondrej/php
